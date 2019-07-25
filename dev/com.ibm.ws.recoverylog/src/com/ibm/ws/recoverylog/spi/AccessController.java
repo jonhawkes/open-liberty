@@ -23,14 +23,13 @@ import java.security.PrivilegedExceptionAction;
  * Each product specific recoverylog service should implement this interface and make it available
  * to the services.
  */
-public interface AccessController
-{
-   /**
-    * Called to perform java2 security security manager (if one is available) function.
-    * May throw PrivilegedActionException or PrivilegedExceptionAction.
-    * @param action contains the code to run under the security manager control.
-    */
-   public Object doPrivileged(PrivilegedExceptionAction action) throws PrivilegedActionException;
-
+public interface AccessController {
+    /**
+     * Called to perform java2 security security manager (if one is available) function.
+     * May throw PrivilegedActionException or PrivilegedExceptionAction.
+     * 
+     * @param action contains the code to run under the security manager control.
+     */
+    public Object doPrivileged(PrivilegedExceptionAction action) throws PrivilegedActionException;
 
 }

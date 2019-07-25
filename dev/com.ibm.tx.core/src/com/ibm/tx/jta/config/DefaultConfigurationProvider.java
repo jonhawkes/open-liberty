@@ -229,7 +229,6 @@ public class DefaultConfigurationProvider implements ConfigurationProvider {
      */
     @Override
     public String getRecoveryIdentity() {
-        // TODO Auto-generated method stub
         return null;
     }
 
@@ -240,7 +239,6 @@ public class DefaultConfigurationProvider implements ConfigurationProvider {
      */
     @Override
     public String getRecoveryGroup() {
-        // TODO Auto-generated method stub
         return null;
     }
 
@@ -265,8 +263,6 @@ public class DefaultConfigurationProvider implements ConfigurationProvider {
      */
     @Override
     public void shutDownFramework() {
-        // TODO Auto-generated method stub
-
     }
 
     /*
@@ -286,7 +282,6 @@ public class DefaultConfigurationProvider implements ConfigurationProvider {
      */
     @Override
     public boolean needToCoordinateServices() {
-        // TODO Auto-generated method stub
         return false;
     }
 
@@ -334,4 +329,43 @@ public class DefaultConfigurationProvider implements ConfigurationProvider {
         return 10;
     }
 
+    /*
+     * (non-Javadoc)
+     * 
+     * @see com.ibm.tx.config.ConfigurationProvider#getLeaseLogDirectory()
+     */
+    @Override
+    public String getLeaseLogDirectory() {
+        return null;
+    }
+
+    /*
+     * (non-Javadoc)
+     * 
+     * @see com.ibm.tx.config.ConfigurationProvider#getLeaseCheckStrategy()
+     */
+    @Override
+    public String getLeaseCheckStrategy() {
+        return null;
+    }
+
+    /*
+     * (non-Javadoc)
+     * 
+     * @see com.ibm.tx.config.ConfigurationProvider#getLeaseCheckInterval()
+     */
+    @Override
+    public int getLeaseCheckInterval() {
+        return 0;
+    }
+
+    /*
+     * (non-Javadoc)
+     * 
+     * @see com.ibm.tx.config.ConfigurationProvider#getLeaseLength()
+     */
+    @Override
+    public int getLeaseLength() {
+        return 0;
+    }
 }

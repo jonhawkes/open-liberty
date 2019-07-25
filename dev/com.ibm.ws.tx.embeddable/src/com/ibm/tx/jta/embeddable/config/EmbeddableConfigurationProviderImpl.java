@@ -395,7 +395,6 @@ public class EmbeddableConfigurationProviderImpl implements ConfigurationProvide
      */
     @Override
     public boolean needToCoordinateServices() {
-        // TODO Auto-generated method stub
         return false;
     }
 
@@ -406,7 +405,6 @@ public class EmbeddableConfigurationProviderImpl implements ConfigurationProvide
      */
     @Override
     public boolean enableHADBPeerLocking() {
-        // TODO Auto-generated method stub
         return false;
     }
 
@@ -417,7 +415,6 @@ public class EmbeddableConfigurationProviderImpl implements ConfigurationProvide
      */
     @Override
     public int getTimeBetweenHeartbeats() {
-        // TODO Auto-generated method stub
         return 5;
     }
 
@@ -428,7 +425,6 @@ public class EmbeddableConfigurationProviderImpl implements ConfigurationProvide
      */
     @Override
     public int getPeerTimeBeforeStale() {
-        // TODO Auto-generated method stub
         return 10;
     }
 
@@ -439,7 +435,46 @@ public class EmbeddableConfigurationProviderImpl implements ConfigurationProvide
      */
     @Override
     public int getLocalTimeBeforeStale() {
-        // TODO Auto-generated method stub
         return 10;
+    }
+
+    /*
+     * (non-Javadoc)
+     *
+     * @see com.ibm.tx.config.ConfigurationProvider#getLeaseLogDirectory()
+     */
+    @Override
+    public String getLeaseLogDirectory() {
+        return null;
+    }
+
+    /*
+     * (non-Javadoc)
+     *
+     * @see com.ibm.tx.config.ConfigurationProvider#getLeaseCheckStrategy()
+     */
+    @Override
+    public String getLeaseCheckStrategy() {
+        return null;
+    }
+
+    /*
+     * (non-Javadoc)
+     *
+     * @see com.ibm.tx.config.ConfigurationProvider#getLeaseCheckInterval()
+     */
+    @Override
+    public int getLeaseCheckInterval() {
+        return 0;
+    }
+
+    /*
+     * (non-Javadoc)
+     *
+     * @see com.ibm.tx.config.ConfigurationProvider#getLeaseLength()
+     */
+    @Override
+    public int getLeaseLength() {
+        return 0;
     }
 }

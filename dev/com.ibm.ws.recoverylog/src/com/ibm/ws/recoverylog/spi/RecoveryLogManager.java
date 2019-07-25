@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2002, 2018 IBM Corporation and others.
+ * Copyright (c) 2002, 2019 IBM Corporation and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -61,9 +61,14 @@ public interface RecoveryLogManager {
     /**
      * @param localRecoveryIdentity
      * @param recoveryGroup
+     * @param leaseLength
+     * @param leaseCheckStrategy
+     * @param leaseCheckInterval
+     * @param leaseLogDir
      * @param logProperties
      * @return
      * @throws InvalidLogPropertiesException
      */
-    SharedServerLeaseLog getLeaseLog(String localRecoveryIdentity, String recoveryGroup, LogProperties logProperties) throws InvalidLogPropertiesException;
+    SharedServerLeaseLog getLeaseLog(String localRecoveryIdentity, String recoveryGroup, String leaseLogDir, int leaseCheckInterval, String leaseCheckStrategy, int leaseLength,
+                                     LogProperties logProperties) throws InvalidLogPropertiesException;
 }

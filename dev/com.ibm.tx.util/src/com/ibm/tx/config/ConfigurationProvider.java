@@ -216,6 +216,14 @@ public interface ConfigurationProvider {
 
     public String getRecoveryGroup();
 
+    public String getLeaseLogDirectory();
+
+    public String getLeaseCheckStrategy();
+
+    public int getLeaseCheckInterval();
+
+    public int getLeaseLength();
+
     /**
      * Sets the applId of the server.
      *

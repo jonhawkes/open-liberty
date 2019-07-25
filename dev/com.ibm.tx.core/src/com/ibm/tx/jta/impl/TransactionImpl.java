@@ -1987,8 +1987,13 @@ public class TransactionImpl implements Transaction, ResourceCallback, UOWScopeL
             if (xaRes instanceof OnePhaseXAResource) {
                 getResources().enlistResource(xaRes);
             } else {
-
-                final int recoveryId = TransactionManagerFactory.getTransactionManager().registerResourceInfo("unused", new DirectEnlistXAResourceInfo(xaRes));
+                final int recoveryId;
+                if (!_disableTwoPhase) {
+                    recoveryId = TransactionManagerFactory.getTransactionManager().registerResourceInfo("unused", new DirectEnlistXAResourceInfo(xaRes));
+                } else {
+                    // This is an easy way to cause this enlist to fail with a ISE. We've got 2PC disabled but we're trying to enlist an XA resource so it did ought to fail.
+                    recoveryId = -1;
+                }
                 enlistResource(xaRes, recoveryId);
             }
         } catch (IllegalStateException ise) {

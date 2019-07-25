@@ -36,10 +36,7 @@ public class RecLogServiceImpl {
     private static TraceComponent tc = Tr.register(RecLogServiceImpl.class,
                                                    TraceConstants.TRACE_GROUP, TraceConstants.NLS_FILE);
 
-    private String _recoveryGroup = null;
-    private boolean _isPeerRecoverySupported = false;
-    private static boolean _readyToStart = false;
-    private static boolean _recoveryLogDSReady = false;
+    private boolean _isPeerRecoverySupported;
 
     public RecLogServiceImpl() {
         if (tc.isDebugEnabled())
@@ -187,7 +184,6 @@ public class RecLogServiceImpl {
     public void setRecoveryGroup(String recoveryGroup) {
         if (tc.isEntryEnabled())
             Tr.entry(tc, "setRecoveryGroup", new Object[] { recoveryGroup });
-        _recoveryGroup = recoveryGroup;
         if (tc.isEntryEnabled())
             Tr.exit(tc, "setRecoveryGroup");
     }

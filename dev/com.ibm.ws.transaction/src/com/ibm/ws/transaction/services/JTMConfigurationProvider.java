@@ -267,6 +267,28 @@ public class JTMConfigurationProvider extends DefaultConfigurationProvider imple
     }
 
     @Override
+    public String getLeaseLogDirectory() {
+        return (String) _props.get("leaseLogDirectory");
+    }
+
+    @Override
+    public String getLeaseCheckStrategy() {
+        return (String) _props.get("leaseCheckStrategy");
+    }
+
+    @Override
+    public int getLeaseCheckInterval() {
+        Number num = (Number) _props.get("leaseCheckInterval");
+        return num.intValue();
+    }
+
+    @Override
+    public int getLeaseLength() {
+        Number num = (Number) _props.get("leaseLength");
+        return num.intValue();
+    }
+
+    @Override
     public String getServerName() {
         String serverName = "";
         synchronized (this) {

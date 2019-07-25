@@ -402,9 +402,11 @@ public class RecoveryLogManagerImpl implements RecoveryLogManager {
     }
 
     @Override
-    public SharedServerLeaseLog getLeaseLog(String localRecoveryIdentity, String recoveryGroup, LogProperties logProperties) throws InvalidLogPropertiesException {
+    public SharedServerLeaseLog getLeaseLog(String localRecoveryIdentity, String recoveryGroup, String leaseLogDir, int leaseCheckInterval, String leaseCheckStrategy,
+                                            int leaseLength, LogProperties logProperties) throws InvalidLogPropertiesException {
         if (tc.isEntryEnabled())
-            Tr.entry(tc, "getLeaseLog", new java.lang.Object[] { localRecoveryIdentity, recoveryGroup, logProperties, this });
+            Tr.entry(tc, "getLeaseLog",
+                     new java.lang.Object[] { localRecoveryIdentity, recoveryGroup, leaseLogDir, leaseCheckInterval, leaseCheckStrategy, leaseLength, logProperties, this });
 
         SharedServerLeaseLog leaseLog = null;
         CustomLogProperties customLogProperties = null;
@@ -446,7 +448,7 @@ public class RecoveryLogManagerImpl implements RecoveryLogManager {
             String logDirStem = fileLogProperties.logDirectoryStem();
 
             // If necessary, create a new RecoveryLog object to be returned to the caller.
-            leaseLog = FileSharedServerLeaseLog.getFileSharedServerLeaseLog(logDirStem, localRecoveryIdentity, recoveryGroup);
+            leaseLog = FileSharedServerLeaseLog.getFileSharedServerLeaseLog(logDirStem, leaseLogDir, localRecoveryIdentity, recoveryGroup);
         } else {
             if (tc.isEntryEnabled())
                 Tr.exit(tc, "getLeaseLog");

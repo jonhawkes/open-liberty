@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-    Copyright (c) 2011, 2019 IBM Corporation and others.
+    Copyright (c) 2011,2019 IBM Corporation and others.
     All rights reserved. This program and the accompanying materials
     are made available under the terms of the Eclipse Public License v1.0
     which accompanies this distribution, and is available at
@@ -44,6 +44,18 @@
 
         <AD name="%transaction.log.directory" description="%transaction.log.directory.desc"
             id="transactionLogDirectory" required="false" type="String" default="${server.output.dir}/tranlog/" />
+
+        <AD name="%lease.log.directory" description="%lease.log.directory.desc"
+            id="leaseLogDirectory" required="false" type="String" default="" />
+        
+        <AD name="%lease.check.strategy" description="%lease.check.strategy.desc"
+            id="leaseCheckStrategy" required="false" type="String" default="round-robin" />            
+
+        <AD name="%lease.check.interval" description="%lease.check.interval.desc"
+            id="leaseCheckInterval" required="false" type="String" ibm:type="duration(s)" min="0" default="60s" />
+
+        <AD name="%lease.length" description="%lease.length.desc"
+            id="leaseLength" required="false" type="String" ibm:type="duration(s)" min="0" default="60s" />
 
         <AD name="%transaction.log.size" description="%transaction.log.size.desc"
             id="transactionLogSize" required="false" type="Integer" default="1024" />
