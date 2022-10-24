@@ -779,7 +779,7 @@
     <dependency>
       <groupId>io.smallrye</groupId>
       <artifactId>smallrye-graphql-cdi</artifactId>
-      <version>1.0.26</version>
+      <version>1.8.2</version>
     </dependency>
     <dependency>
       <groupId>io.smallrye</groupId>
@@ -4004,7 +4004,7 @@
     <dependency>
       <groupId>io.smallrye</groupId>
       <artifactId>smallrye-graphql-cdi</artifactId>
-      <version>1.0.9</version>
+      <version>1.8.2</version>
     </dependency>
     <dependency>
       <groupId>io.smallrye</groupId>
