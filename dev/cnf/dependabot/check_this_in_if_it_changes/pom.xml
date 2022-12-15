@@ -1544,7 +1544,7 @@
     <dependency>
       <groupId>org.apache.cxf</groupId>
       <artifactId>cxf-tools-validator</artifactId>
-      <version>3.4.3</version>
+      <version>3.5.5</version>
     </dependency>
     <dependency>
       <groupId>org.apache.cxf</groupId>
@@ -4199,7 +4199,7 @@
     <dependency>
       <groupId>org.apache.cxf</groupId>
       <artifactId>cxf-tools-validator</artifactId>
-      <version>3.3.3</version>
+      <version>3.5.5</version>
     </dependency>
     <dependency>
       <groupId>org.apache.cxf</groupId>
