@@ -3004,17 +3004,17 @@
     <dependency>
       <groupId>org.jboss.resteasy</groupId>
       <artifactId>resteasy-client</artifactId>
-      <version>4.7.2.Final</version>
+      <version>6.2.2.Final</version>
     </dependency>
     <dependency>
       <groupId>org.jboss.resteasy</groupId>
       <artifactId>resteasy-client</artifactId>
-      <version>6.0.0.Final</version>
+      <version>6.2.2.Final</version>
     </dependency>
     <dependency>
       <groupId>org.jboss.resteasy</groupId>
       <artifactId>resteasy-client</artifactId>
-      <version>6.1.0.Final</version>
+      <version>6.2.2.Final</version>
     </dependency>
     <dependency>
       <groupId>org.jboss.resteasy</groupId>
