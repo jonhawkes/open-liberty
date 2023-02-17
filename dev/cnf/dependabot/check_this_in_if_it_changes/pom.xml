@@ -2959,7 +2959,7 @@
     <dependency>
       <groupId>org.jboss.narayana</groupId>
       <artifactId>common</artifactId>
-      <version>5.10.6.Final</version>
+      <version>6.0.0.Final</version>
     </dependency>
     <dependency>
       <groupId>org.jboss.resteasy</groupId>
